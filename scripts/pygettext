@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Simple script that runs pygettext.py
+
+# Locate python executable
+PYTHON_EXECUTABLES="python2.7 python2 python"
+for e in $PYTHON_EXECUTABLES; do
+    # Python path
+    pp=$(which $e 2>/dev/null)
+
+    if [ -n $pp ]; then
+        PYTHON=$pp
+        break
+    fi
+done
+
+if [ -z $PYTHON ]; then
+    exit 1
+fi
+
+# Locate pygettext.py.  On Archlinux we ask pacman for the correct path
+grep -Pie "arch\s?linux" /etc/*-release 2>/dev/null 1>/dev/null
+ARCH=$?
+
+if [ "$ARCH" -eq "0" ]; then
+    PYGETTEXT=$(pacman -Ql python2 | grep -i pygettext | sed "s/python2 //")
+else
+    # Just a stupid fallback -- try with $PATH ;)
+    PYGETTEXT=pygettext.py
+fi
+
+$PYTHON $PYGETTEXT $@

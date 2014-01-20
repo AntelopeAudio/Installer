@@ -1,0 +1,136 @@
+# #-#-#-#-#  messages.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# #-#-#-#-#  messages.po (0.01)  #-#-#-#-#
+# Antelope installer resources for the Zodiac Platinum panel
+# Copyright (C) 2014 Elektrosfera Ltd.
+# Yordan Miladinov <yordanm@elektrosfera.eu>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  messages.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-01-20 19:25+EET\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+"#-#-#-#-#  messages.po (0.01)  #-#-#-#-#\n"
+"Project-Id-Version: 0.01\n"
+"POT-Creation-Date: 2014-01-20 17:02+EET\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yordan Miladinov <yordanm@elektrosfera.eu>\n"
+"Language-Team: Bulgarian <yordanm@elektrosfera.eu>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: res.py:14
+msgid "Zodiac Platinum control panel installer"
+msgstr "Инсталатор на контролен панел на Зодиак Платинум"
+
+#: res.py:15
+msgid "<span size=\"20000\">Zodiac Platinum control panel installer</span>"
+msgstr ""
+"<span size=\"20000\">Инсталатор на контролен панел на\n"
+"Зодиак Платинум</span>"
+
+#: res.py:17
+msgid ""
+"This installer asks you for your <b>sudo</b> or <b>root</b> password and un/"
+"installs\n"
+"the Zodiac Platinum control panel on your computer.\n"
+"\n"
+"This program respects your privacy.  It is free software licensed under\n"
+"the terms of the GNU General Public License version 3. The source code\n"
+"for this installer program can be found <a\n"
+"href=\"https://github.com/AntelopeAudio/Installer\">here</a>."
+msgstr ""
+"Този инсталатор Ви пита за Вашата <b>sudo</b> или <b>root</b> парола и де/"
+"инсталира\n"
+"контролния панел на Зодиак Платинум на Вашия компютър.\n"
+"\n"
+"Този инсталатор уважава личните Ви данни.  Той е свободен софтуер, \n"
+"лицензиран с GNU General Public License версия 3.  Можете да видите \n"
+"сорс кода на инсталатора <a href=\"https://github.com/AntelopeAudio/Installer"
+"\">тук</a>."
+
+#: res.py:28
+msgid "Install"
+msgstr "Инсталирай"
+
+#: res.py:44
+msgid "Uninstall"
+msgstr "Изтрий"
+
+#: res.py:29
+msgid "Close"
+msgstr "Затвори"
+
+#: res.py:31
+msgid "Installation"
+msgstr "Инсталация"
+
+#: res.py:29
+msgid ""
+"Please enter your sudo or root password to install Zodiac Platinum control "
+"panel."
+msgstr ""
+"Моля въведете Вашата sudo или root парола, за да инсталирате контролния "
+"панел на Зодиак Платинум"
+
+#: res.py:33
+msgid "Run control panel after install"
+msgstr "Пусни контролния панел след инсталация"
+
+#: res.py:35
+msgid "Installing..."
+msgstr "Инсталиране..."
+
+#: res.py:38 res.py:54
+msgid "Please check your password and try again"
+msgstr "Моля проверете своята парола и опитайте отново"
+
+#: res.py:40 res.py:56
+msgid "Success!"
+msgstr "Успех!"
+
+#: res.py:41
+msgid "The control panel for your Zodiac Platinum is successfully installed"
+msgstr "Контролният панел на Зодиак Платинум е инсталиран успешно"
+
+#: res.py:47
+msgid "Uninstallation"
+msgstr "Изтриване"
+
+#: res.py:45
+msgid ""
+"Please enter your sudo or root password to uninstall Zodiac Platinum control "
+"panel."
+msgstr ""
+"Моля въведете Вашата sudo или root парола, за да изтриете контролния панел "
+"на Зодиак Платинум"
+
+#: res.py:49
+msgid "Delete configuration files"
+msgstr "Изтрий и конфигурационните файлове"
+
+#: res.py:51
+msgid "Uninstalling..."
+msgstr "Изтриване..."
+
+#: res.py:57
+msgid "The control panel for your Zodiac Platinum is successfully uninstalled"
+msgstr "Контролният панел на Зодиак Платинум е изтрит успешно"
+
+#: res.py:60
+msgid "© Antelope audio 2014"
+msgstr "© Антелоп аудио 2014"

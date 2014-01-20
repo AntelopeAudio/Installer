@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-01-20 19:25+EET\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: ./res.py:14
+msgid "Zodiac Platinum control panel installer"
+msgstr ""
+
+#: ./res.py:15
+msgid "<span size=\"20000\">Zodiac Platinum control panel installer</span>"
+msgstr ""
+
+#: ./res.py:17
+msgid ""
+"This installer asks you for your <b>sudo</b> or <b>root</b> password and un/installs\n"
+"the Zodiac Platinum control panel on your computer.\n"
+"\n"
+"This program respects your privacy.  It is free software licensed under\n"
+"the terms of the GNU General Public License version 3. The source code\n"
+"for this installer program can be found <a\n"
+"href=\"https://github.com/AntelopeAudio/Installer\">here</a>."
+msgstr ""
+
+#: ./res.py:27
+msgid "Install"
+msgstr ""
+
+#: ./res.py:28
+msgid "Uninstall"
+msgstr ""
+
+#: ./res.py:29
+msgid "Close"
+msgstr ""
+
+#: ./res.py:31
+msgid "Installation"
+msgstr ""
+
+#: ./res.py:32
+msgid "Please enter your sudo or root password to install Zodiac Platinum control panel."
+msgstr ""
+
+#: ./res.py:36
+msgid "Run control panel after install"
+msgstr ""
+
+#: ./res.py:38
+msgid "Installing..."
+msgstr ""
+
+#: ./res.py:41 ./res.py:57
+msgid "Please check your password and try again"
+msgstr ""
+
+#: ./res.py:43 ./res.py:59
+msgid "Success!"
+msgstr ""
+
+#: ./res.py:44
+msgid "The control panel for your Zodiac Platinum is successfully installed"
+msgstr ""
+
+#: ./res.py:47
+msgid "Uninstallation"
+msgstr ""
+
+#: ./res.py:48
+msgid "Please enter your sudo or root password to uninstall Zodiac Platinum control panel."
+msgstr ""
+
+#: ./res.py:52
+msgid "Delete configuration files"
+msgstr ""
+
+#: ./res.py:54
+msgid "Uninstalling..."
+msgstr ""
+
+#: ./res.py:60
+msgid "The control panel for your Zodiac Platinum is successfully uninstalled"
+msgstr ""
+
+#: ./res.py:63
+msgid "© Antelope audio 2014"
+msgstr ""
+

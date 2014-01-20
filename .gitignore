@@ -34,3 +34,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# y: dist directories contain control panel distribution files.  I omit
+# these here to safe some repository space.  Anyway, these files can
+# always be obtained from the antelopeaudio.com website.
