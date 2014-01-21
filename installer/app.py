@@ -121,7 +121,6 @@ class Installer(object):
 
     def _uninstall(self, widget, data=None):
         ret = commands.execute_command(self.resmodule, 'uninstall', self.window)
-        print('ret={}'.format(ret))
         if ret == 0:
             self._success_and_quit('install')
 
