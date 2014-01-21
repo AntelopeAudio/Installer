@@ -11,6 +11,8 @@ _ = gettext.translation('messages', localedir=localedir, fallback=True).ugettext
 
 class Resources(BaseResources):
 
+    modname = 'installer_platinum.res'
+
     title = _('Zodiac Platinum control panel installer')
     header = _('<span size="20000">Zodiac Platinum control panel installer</span>')
     header_font_desc = "25.0"

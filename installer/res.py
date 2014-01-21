@@ -7,6 +7,8 @@ from installer.utils import import_module
 
 class BaseResources(object):
 
+    modname = ''
+
     # Main
     title = ''
     header = ''
@@ -39,15 +41,12 @@ class BaseResources(object):
     # Footer
     footer = ''
 
-    def __init__(self, modname):
-        self._modname = modname
-
     @property
     def wizard_image(self):
         fn = self._wizard_image
-        return pkg_resources.resource_filename(self._modname, fn)
+        return pkg_resources.resource_filename(self.modname, fn)
 
 
 def get_resources(modname):
     module = import_module('%s.res' % modname)
-    return module.Resources(modname)
+    return module.Resources()
