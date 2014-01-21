@@ -14,8 +14,6 @@ from installer import commands
 
 gobject.threads_init()
 
-DIALOG_SUCCESS = 100
-
 
 def install(modname, data):
     inst = commands.load_command_class(modname, 'install')
@@ -115,62 +113,17 @@ class Installer(object):
         )
         self._quit()
 
-    def _worker(self, dialog, cmdname):
-        ret = commands.execute_command(
-            self.resmodule,
-            cmdname,
-            password=dialog.get_password(),
-            checkboxes=dialog.get_checkboxes()
-        )
-        if ret == 0:
-            dialog.response(DIALOG_SUCCESS)
-        else:
-            fb = getattr(self.res, '{}_feedback'.format(cmdname))[ret]
-            if isinstance(fb, types.StringTypes):
-                text, style = fb, 'error'
-            else:
-                text, style = fb
-            dialog.show_feedback(text, style=style)
-
     def _install(self, widget, data=None):
-        pwdialog = dialogs.PasswordDialog(
-            self.window,
-            message_format=self.res.install_message,
-            title=self.res.install_title,
-            checkboxes=self.res.install_cb
-        )
-
-        def action():
-            pwdialog.show_loader(self.res.install_wait)
-            # Start another thread that executes an external command
-            t = Thread(target=self._worker, args=[pwdialog, 'install'])
-            t.start()
-
-        pwdialog.ok_cb = action
-        resp = pwdialog.run()
-        pwdialog.destroy()
-        if resp == DIALOG_SUCCESS:
+        ret = commands.execute_command(self.resmodule, 'install', self.window)
+        print('ret={}'.format(ret))
+        if ret == 0:
             self._success_and_quit('install')
 
-    # TODO y: DRY!!  This method is absolutely the same as _install()
     def _uninstall(self, widget, data=None):
-        pwdialog = dialogs.PasswordDialog(
-            self.window,
-            message_format=self.res.uninstall_message,
-            title=self.res.uninstall_title,
-            checkboxes=self.res.uninstall_cb
-        )
-
-        def action():
-            pwdialog.show_loader(self.res.uninstall_wait)
-            t = Thread(target=self._worker, args=[pwdialog, 'uninstall'])
-            t.start()
-
-        pwdialog.ok_cb = action
-        resp = pwdialog.run()
-        pwdialog.destroy()
-        if resp == DIALOG_SUCCESS:
-            self._success_and_quit('uninstall')
+        ret = commands.execute_command(self.resmodule, 'uninstall', self.window)
+        print('ret={}'.format(ret))
+        if ret == 0:
+            self._success_and_quit('install')
 
     def _quit(self, widget=None, data=None):
         self.window.destroy()
