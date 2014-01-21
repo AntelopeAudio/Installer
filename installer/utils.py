@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import functools
+import subprocess
 import sys
 
 
@@ -39,3 +41,39 @@ def import_module(name, package=None):
         name = _resolve_name(name[level:], package, level)
     __import__(name)
     return sys.modules[name]
+
+
+def is_root():
+    """
+    Return True if current user is root
+    """
+    try:
+        return subprocess.check_output(['whoami']).strip() == 'root'
+    except subprocess.CalledProcessError:
+        return False
+
+
+def is_sudoer():
+    """
+    Return True if current user is sudoer
+    """
+    process = subprocess.Popen(['sudo', '-n', '-v'],
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)
+    com = process.communicate()
+    if any('may not run sudo' in s for s in com):
+        return False
+    return True
+
+
+def has_program(program):
+    try:
+        subprocess.check_output(['which', program])
+        return True
+    except subprocess.CalledProcessError:
+        return False
+
+
+has_gksudo = functools.partial(has_program, 'gksudo')
+has_gksu = functools.partial(has_program, 'gksu')
+has_kdesu = functools.partial(has_program, 'kdesu')
