@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=Zodiac Platinum Control Panel
+Name[bg]=Контролен панел на Зодиак Платинум
+GenericName=Control Panel
+GenericName[bg]=Контролен панел
+Comment=Control your Zodiac Platinum device
+Comment[bg]=Управлявай своя Зодиак Платинум
+
+Exec=/opt/platinum/platinum
+# TryExec
+Icon=platinum
+Terminal=false
+Categories=AudioVideo;Audio;Player;
+StartupNotify=false
+# MemeType
