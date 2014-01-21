@@ -3,32 +3,28 @@
 import pkg_resources
 import subprocess
 
-from installer.commands import BaseCommand
+from installer.commands import RunScriptCommand
+from installer_platinum.res import Resources
 
 
-class Command(BaseCommand):
-    def execute(self, *args, **kwargs):
-        # Run commands/burn/install.sh
-        runner = pkg_resources.resource_filename(
-            'installer_platinum_res',
-            'burn/runner.sh'
-        )
-        install = pkg_resources.resource_filename(
-            'installer_platinum_res',
-            'burn/install.bash'
-        )
-        password = kwargs['password']
-        ret = subprocess.call(['bash', runner, install, password])
-        if ret == 0:
-            print('[python] Success!')
-            cb = kwargs.get('checkboxes', {})
-            if cb.get('run_after_install', False):
-                run = pkg_resources.resource_filename(
-                    'installer_platinum_res',
-                    'burn/run_after_install.bash'
-                )
-                subprocess.call(run)
-            return 0
-        else:
-            print('[PYTHON] Failure!')
-            return 1
+res = Resources()
+
+
+class Command(RunScriptCommand):
+    dialog_checkboxes = res.install_cb
+    dialog_feedback = res.install_feedback
+    dialog_message = res.install_message
+    dialog_title = res.install_title
+    dialog_wait = res.install_wait
+    script = pkg_resources.resource_filename(
+        'installer_platinum_res',
+        'burn/install.bash'
+    )
+
+    def on_dialog_success(self, checkboxes):
+        if checkboxes.get('run_after_install', False):
+            run = pkg_resources.resource_filename(
+                'installer_platinum_res',
+                'burn/run_after_install.bash'
+            )
+            subprocess.call(run)
