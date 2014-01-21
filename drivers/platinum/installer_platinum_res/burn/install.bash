@@ -11,9 +11,9 @@ test "$(whoami)" != 'root' \
     && exit 1
 
 BASE_DIR=$(dirname ${BASH_SOURCE[0]})
-DIST_DIR="$BASE_DIR/dist"
-PLATINUM_DIR="$DIST_DIR/platinum"
-USR_DIR="$DIST_DIR/usr"
+INSTALLFILES_DIR="$BASE_DIR/installfiles"
+PLATINUM_DIR="$INSTALLFILES_DIR/platinum"
+USR_DIR="$INSTALLFILES_DIR/usr"
 
 cp -r $PLATINUM_DIR /opt
 cp -r $USR_DIR /
