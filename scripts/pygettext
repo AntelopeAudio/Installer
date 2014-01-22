@@ -24,9 +24,8 @@ ARCH=$?
 
 if [ "$ARCH" -eq "0" ]; then
     PYGETTEXT=$(pacman -Ql python2 | grep -i pygettext | sed "s/python2 //")
+    $PYTHON $PYGETTEXT $@
 else
     # Just a stupid fallback -- try with $PATH ;)
-    PYGETTEXT=pygettext.py
+    pygettext.py $@
 fi
-
-$PYTHON $PYGETTEXT $@
